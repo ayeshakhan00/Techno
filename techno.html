@@ -1,0 +1,3155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Techno</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .Section1 {
+            height: 125vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(./images/images03.jpg);
+            background-size: auto;
+            background-position: top;
+        }
+
+        .Navbar {
+            height: 100px;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+
+        .logo {
+            background-image: url(./images/images02.png);
+            background-size: contain;
+            background-position: center;
+            height: 35px;
+            width: 164px;
+            /* border: 1px solid red; */
+            margin-left: 230px;
+            margin-top: 30px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+
+        .Navul {
+            color: white;
+            /* border: 1px solid red; */
+            list-style: none;
+            width: max-content;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 200px;
+            margin-top: 40px;
+            cursor: pointer;
+        }
+
+        .N1 {
+            display: inline;
+            vertical-align: top;
+            margin: 15px;
+            font-size: 17px;
+        }
+
+        .N1 a {
+            text-decoration: none;
+            color: white;
+            position: relative;
+            /* border: 1px solid red; */
+            padding: 0px 0px 40px 0px;
+
+        }
+
+        .dropdown {
+            height: 500px;
+            width: 1100px;
+            position: absolute;
+            background-color: white;
+            margin-top: 50px;
+            z-index: -1;
+            overflow: hidden;
+            left: 0;
+            margin-left: 240px;
+            transition: 1s;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        /* @keyframes slideup {
+            from {
+                top: 90px;
+                opacity: 0;
+            }
+
+            to {
+                top: 60px;
+                opacity: 1;
+            }
+        } */
+
+        .N1:hover .dropdown {
+            margin-top: 30px;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .td1 {
+            height: 420px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+            margin-left: 40px;
+        }
+
+        .TT {
+            color: rgb(64, 64, 64);
+            font-weight: normal;
+            line-height: 40px;
+            font-size: 17px;
+        }
+
+        .TT:hover {
+            color: rgb(12, 90, 219);
+        }
+
+        .td2 {
+            height: 420px;
+            width: 190px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+            margin-left: 80px;
+        }
+
+        .dropdown2 {
+            height: 170px;
+            width: 300px;
+            position: absolute;
+            /* border: 1px solid red; */
+            background-color: white;
+            margin-top: 50px;
+            z-index: -1;
+            transition: 1s;
+            overflow: hidden;
+            margin-left: 200px;
+            opacity: 0;
+        }
+
+        .N1:hover .dropdown2 {
+            margin-top: 30px;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .td5 {
+            height: 140px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .dropdown3 {
+            height: 300px;
+            width: 1160px;
+            position: absolute;
+            /* border: 1px solid red; */
+            background-color: white;
+            margin-top: 50px;
+            z-index: -1;
+            overflow: hidden;
+            transition: 1s;
+            opacity: 0;
+            left: 0;
+            margin-left: 200px;
+        }
+
+        .N1:hover .dropdown3 {
+            margin-top: 30px;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .TT3 {
+            color: rgb(64, 64, 64);
+            font-weight: normal;
+            line-height: 42px;
+            font-size: 17px;
+            margin-left: 15px;
+        }
+
+        .TT3:hover {
+            color: rgb(12, 90, 219);
+        }
+
+        .td4 {
+            height: 140px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+            margin-left: 160px;
+        }
+
+        .td6 {
+            height: 140px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+
+        .TT6 {
+            color: rgb(64, 64, 64);
+            font-weight: normal;
+            height: 30px;
+            width: 300px;
+            padding: 5px;
+            font-size: 17px;
+            padding-left: 5px;
+            transition: .34s;
+        }
+
+        .TT6:hover {
+            color: white;
+            background-color: rgb(12, 90, 219);
+        }
+
+        .srch {
+            height: 25px;
+            width: 30px;
+            /* border: 1px solid; */
+            background-color: rgb(12, 90, 219);
+            border-radius: 4px;
+            color: white;
+            font-size: 13px;
+            text-align: center;
+            padding: 5px;
+            border: none;
+            margin-top: 36px;
+            margin-left: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .bag {
+            height: 25px;
+            width: 30px;
+            /* border: 1px solid; */
+            background-color: rgb(12, 90, 219);
+            border-radius: 4px;
+            color: white;
+            font-size: 13px;
+            text-align: center;
+            padding: 5px;
+            border: none;
+            margin-top: 36px;
+            margin-left: 10px;
+            font-weight: bold;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cd {
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            border: 1px solid;
+            background-color: rgba(0, 0, 0, 0.742);
+            border-radius: 10px;
+            font-size: 10px;
+            border: none;
+            padding: 3px;
+            margin-top: -28px;
+            margin-left: 10px;
+        }
+
+        .wc {
+            color: white;
+            font-weight: normal;
+            margin-left: 40%;
+            margin-top: 13%;
+        }
+
+        #container {
+            position: relative;
+            width: 43%;
+            height: 10vh;
+            border-right: 8px solid;
+            margin: 10vh auto;
+            font-family: Arial, Helvetica, sans-serif;
+            animation: duster 10s ease-out infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            color: white;
+            /* border: 1px solid red; */
+            margin-top: 36px;
+        }
+
+        @keyframes duster {
+            0% {
+                width: 0;
+            }
+
+            16% {
+                width: 55%;
+            }
+
+            21% {
+                width: 55%;
+            }
+
+            33% {
+                width: 0;
+            }
+
+            49% {
+                width: 40%;
+            }
+
+            54% {
+                width: 40%;
+            }
+
+            66% {
+                width: 0;
+            }
+
+            83% {
+                width: 41%;
+            }
+
+            88% {
+                width: 41%;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+
+        .pais {
+            position: absolute;
+            font-size: 60px;
+            animation: txt1 10s linear infinite;
+        }
+
+        @keyframes txt1 {
+            0% {
+                visibility: visible;
+            }
+
+            33% {
+                visibility: visible;
+            }
+
+            33.1% {
+                visibility: hidden;
+            }
+
+            100% {
+                visibility: hidden;
+            }
+        }
+
+        .hs {
+            position: absolute;
+            font-size: 60px;
+            animation: txt2 10s linear infinite;
+        }
+
+        @keyframes txt2 {
+            0% {
+                visibility: hidden;
+            }
+
+            33% {
+                visibility: hidden;
+            }
+
+            33.1% {
+                visibility: visible;
+            }
+
+            66.1% {
+                visibility: visible;
+            }
+
+            66.2% {
+                visibility: hidden;
+            }
+
+            100% {
+                visibility: hidden;
+            }
+        }
+
+        .dm {
+            position: absolute;
+            font-size: 60px;
+            animation: txt3 10s linear infinite;
+        }
+
+        @keyframes txt3 {
+            0% {
+                visibility: hidden;
+            }
+
+            66.1% {
+                visibility: hidden;
+            }
+
+            66.2% {
+                visibility: visible;
+            }
+
+            100% {
+                visibility: visible;
+            }
+        }
+
+        .para1 {
+            text-align: center;
+            color: white;
+            margin-top: -30px;
+            font-size: 20px;
+        }
+
+        .btn1 {
+            height: 50px;
+            width: 160px;
+            background-color: rgb(12, 90, 219);
+            margin-left: 600px;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            font-size: 17px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: .34s;
+        }
+
+        .btn1:hover {
+            color: rgb(12, 90, 219);
+            background: white;
+            border: none;
+
+        }
+
+        .btn2 {
+            height: 50px;
+            width: 170px;
+            background-color: rgb(12, 90, 219);
+            margin-left: 20px;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            font-size: 17px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: .34s;
+        }
+
+        .btn2:hover {
+            color: rgb(12, 90, 219);
+            background: white;
+            border: none;
+
+        }
+
+        .dropdown4 {
+            height: 100px;
+            width: 270px;
+            position: absolute;
+            /* border: 1px solid red; */
+            background-color: white;
+            margin-top: 50px;
+            z-index: -1;
+            overflow: hidden;
+            margin-left: 480px;
+            padding: 0;
+            transition: 1s;
+            opacity: 0;
+        }
+
+        .N1:hover .dropdown4 {
+            z-index: 1;
+            opacity: 1;
+            margin-top: 30px;
+        }
+
+        .Section2 {
+            height: 130vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+        }
+
+        .Blocks {
+            height: 490px;
+            width: 1200px;
+            /* border: 1px solid red; */
+            margin-left: 160px;
+            z-index: 1;
+            margin-top: -140px;
+        }
+
+        .block1 {
+            height: 450px;
+            width: 380px;
+            background-color: white;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin: 7px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            transition: .34s;
+            margin-top: 10px;
+
+        }
+
+        .block1:hover {
+            background-color: rgb(12, 90, 219);
+            color: white;
+            margin-top: 0;
+        }
+
+        .block1:hovesocialr .icondiv1 {
+            color: white;
+        }
+
+        .block1:hover .pg1 {
+            color: white;
+        }
+
+        .block1:hover .RM {
+            color: white;
+        }
+
+        .block2 {
+            height: 450px;
+            width: 380px;
+            background-color: rgb(12, 90, 219);
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin: 7px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            margin-top: 10px;
+            transition: .34s;
+        }
+
+        social .icondiv1 {
+            height: 130px;
+            width: 130px;
+            /* border: 1px solid rebeccapurple; */
+            border-radius: 80px;
+            position: relative;
+            background-color: rgb(237, 244, 252);
+            text-align: center;
+            margin-left: 120px;
+            margin-top: 50px;
+        }
+
+        .PE {
+            font-size: 50px;
+            color: rgb(12, 90, 219);
+            margin-top: 40px;
+        }
+
+        .h1 {
+            margin-top: 40px;
+        }
+
+        .pg1 {
+            color: rgb(96, 93, 93);
+            margin-top: 30px;
+            line-height: 25px;
+        }
+
+        .RM {
+            margin-top: 40px;
+            color: rgb(12, 90, 219);
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        social .icondiv2 {
+            height: 130px;
+            width: 130px;
+            /* border: 1px solid rebeccapurple; */
+            border-radius: 80px;
+            position: relative;
+            background-color: rgb(237, 244, 252);
+            text-align: center;
+            margin-left: 120px;
+            margin-top: 50px;
+        }
+
+        .facebook {
+            font-size: 50px;
+            color: rgb(12, 90, 219);
+            margin-top: 40px;
+        }
+
+        .hd1 {
+            margin-top: 40px;
+            color: white;
+        }
+
+        .pg2 {
+            color: white;
+            margin-top: 30px;
+            line-height: 25px;
+        }
+
+        .RM2 {
+            margin-top: 40px;
+            color: white;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        .block2:hover {
+            margin-top: 0;
+        }
+
+        .image2l {
+            height: 400px;
+            width: 400px;
+            /* border: 1px solid red; */
+            margin-left: 250px;
+            background-image: url(./images/images04.png);
+            background-size: cover;
+            background-position: center;
+            margin-top: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .playic{
+            height: 70px;
+            width: 70px;
+            /* border: 1px solid red; */
+            background-color: white;
+            transform: translateX(150px)translateY(170px);
+            border-radius: 50px;
+            position: relative;
+        }
+        .pc{
+            color: rgb(12, 90, 219);
+            font-size: 30px;
+            margin-left: 35%;
+            margin-top: 30%;
+        }
+        .glooming1{
+            height: 70px;
+            width: 70px;
+            background-color: rgba(255, 255, 255, 0.588);
+            position: absolute;
+            border-radius: 70px;
+            margin-top: -50px;
+            z-index: -1;
+            animation: gloom 2s linear infinite;
+        }
+        @keyframes gloom{
+            from{
+                transform: scale(1);
+            }
+            to{
+                transform: scale(1.3);
+            background-color: rgba(255, 255, 255, 0.336);
+                
+            }
+        }
+        .glooming2{
+            height: 85px;
+            width: 85px;
+            background-color: rgba(249, 245, 245, 0.47);
+            position: absolute;
+            border-radius: 80px;
+            margin-top: -57px;
+            margin-left: -8px;
+            z-index: -2;
+            animation: gloom2 2s linear infinite;
+        }
+        @keyframes gloom2{
+            from{
+                transform: scale(1);
+            }
+            to{
+                transform: scale(1.4);
+                background-color: rgba(255, 255, 255, 0.336);
+                
+            }
+        }
+        .glooming3{
+            height: 100px;
+            width: 100px;
+            background-color: rgba(249, 246, 246, 0.453);
+            position: absolute;
+            border-radius: 100px;
+            margin-top: -65px;
+            margin-left: -15px;
+            z-index: -3;
+            animation: gloom3 2s linear infinite;
+        }
+        @keyframes gloom3{
+            from{
+                transform: scale(1);
+                opacity: 1;
+            }
+            to{
+                transform: scale(1.4);
+                background-color: rgba(255, 255, 255, 0.336);
+                opacity: 0;
+                
+            }
+        }
+
+        .text2r {
+            height: 450px;
+            width: 620px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+
+        .digits {
+            font-size: 130px;
+            color: rgb(12, 90, 219);
+            /* border: 1px solid; */
+            width: max-content;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .exyear {
+            display: inline-block;
+            vertical-align: top;
+            /* border: 1px solid; */
+            margin-left: 30px;
+            font-size: 35px;
+        }
+
+        .Paragraph2 {
+            color: rgb(96, 93, 93);
+            font-size: 19px;
+            margin-left: 10px;
+            line-height: 26px;
+        }
+
+        .btn3 {
+            height: 50px;
+            width: 160px;
+            background-color: rgb(12, 90, 219);
+            margin-left: 10px;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            font-size: 17px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: .34s;
+        }
+
+        .btn3:hover {
+            background-color: rgb(10, 49, 111);
+        }
+
+        .Section3 {
+            height: 156vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-color: rgb(53, 54, 54);
+            padding: 10px;
+        }
+
+        .Text3 {
+            height: 200px;
+            width: 800px;
+            /* border: 1px solid red; */
+            margin-left: 300px;
+            margin-top: 50px;
+            text-align: center;
+
+        }
+
+        .Services {
+            color: white;
+            font-weight: normal;
+            letter-spacing: 6px;
+        }
+
+        .s2 {
+            margin-top: 15px;
+            color: white;
+            font-size: 43px;
+        }
+
+        .s3 {
+            margin-top: 5px;
+            color: white;
+            font-size: 33px;
+        }
+
+        .andiv {
+            height: 5px;
+            width: 100px;
+            /* border: 1px solid; */
+            border-radius: 3px;
+            background-color: rgb(174, 198, 239);
+            margin-top: 30px;
+            margin-left: 360px;
+            position: relative;
+        }
+
+        .circled {
+            height: 12px;
+            width: 12px;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            background-color: rgb(12, 90, 219);
+            position: absolute;
+            margin-top: -4px;
+            animation: slideright 3s linear infinite;
+        }
+
+        @keyframes slideright {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 90px;
+            }
+        }
+
+        .sbdiv {
+            height: 100vh;
+            width: 1200px;
+            /* border: 1px solid red; */
+            margin-left: 150px;
+        }
+
+        .transparentd {
+            height: 300px;
+            width: 370px;
+            display: inline-block;
+            vertical-align: top;
+            border: 1px solid;
+            background-color: rgba(172, 172, 172, 0.103);
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 17px 15px rgba(255, 255, 255, 0.1);
+            text-align: left;
+            transition: .34s;
+            margin-top: 20px;
+
+        }
+
+        .transparentd:hover {
+            background-color: rgb(12, 90, 219);
+            border: none;
+            margin-top: 10px;
+        }
+
+        .transparentd2 {
+            height: 300px;
+            width: 370px;
+            display: inline-block;
+            vertical-align: top;
+            border: 1px solid;
+            background-color: rgba(172, 172, 172, 0.103);
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 17px 15px rgba(255, 255, 255, 0.1);
+            text-align: left;
+            margin-top: -380px;
+            margin-left: 160px;
+            transition: .34s;
+
+        }
+
+        .transparentd2:hover {
+            background-color: rgb(12, 90, 219);
+            border: none;
+            margin-top: -390px;
+        }
+
+        .transparentd3 {
+            height: 300px;
+            width: 370px;
+            display: inline-block;
+            vertical-align: top;
+            border: 1px solid;
+            background-color: rgba(172, 172, 172, 0.103);
+            border-radius: 10px;
+            box-shadow: 0px 0px 17px 15px rgba(255, 255, 255, 0.1);
+            text-align: left;
+            margin-top: -380px;
+            margin-left: 10px;
+            transition: .34s;
+        }
+
+        .transparentd3:hover {
+            background-color: rgb(12, 90, 219);
+            border: none;
+            margin-top: -390px;
+        }
+
+        .transparentd4 {
+            height: 300px;
+            width: 370px;
+            display: inline-block;
+            vertical-align: top;
+            border: 1px solid;
+            background-color: rgba(172, 172, 172, 0.103);
+            border-radius: 10px;
+            box-shadow: 0px 0px 17px 15px rgba(255, 255, 255, 0.1);
+            text-align: left;
+            margin-top: -380px;
+            margin-left: 20px;
+            transition: .34s;
+
+        }
+
+        .transparentd4:hover {
+            background-color: rgb(12, 90, 219);
+            border: none;
+            margin-top: -390px;
+        }
+
+        .fb {
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+            border-radius: 8px;
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            font-size: 40px;
+            padding: 10px;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+
+        .font {
+            border: 1px solid white;
+            color: white;
+            font-size: 50px;
+            margin-left: 20px;
+            margin-top: 40px;
+            border: none;
+        }
+
+        .h3 {
+            color: white;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .pg3 {
+            color: rgb(227, 224, 224);
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 17px;
+            line-height: 22px;
+        }
+
+        .readmore {
+            color: rgb(227, 224, 224);
+            margin-left: 20px;
+            margin-top: 20px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .aw {
+            font-size: 20px;
+            margin-top: 18px;
+            margin-left: 4px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            color: white;
+            transition: .34s;
+        }
+
+        .Summary {
+            height: 34vh;
+            width: 1200px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images06.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 16px;
+            margin-left: 160px;
+            z-index: 1;
+            margin-top: -100px;
+            padding: 10px;
+        }
+
+        .smryd {
+            height: 200px;
+            width: 1200px;
+            /* border: 1px solid red; */
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        .fifteenk {
+            height: 200px;
+            width: 290px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .fk {
+            font-size: 46px;
+            color: white;
+            margin-left: 80px;
+            margin-top: 50px;
+        }
+
+        .cl {
+            color: white;
+            margin-left: 70px;
+            margin-top: 10px;
+            font-weight: normal;
+            font-size: 20px;
+        }
+
+        .borderr {
+            border-right: 1px solid white;
+            height: 100px;
+            margin-top: -100px;
+            margin-left: -20px;
+        }
+
+        .Section4 {
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .csdiv {
+            height: 130px;
+            width: 1000px;
+            /* border: 1px solid red; */
+            margin-top: 100px;
+            margin-left: 170px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .csstudy {
+            letter-spacing: 5px;
+            color: rgb(12, 90, 219);
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .cs2 {
+            font-size: 43px;
+            margin-top: 10px;
+        }
+
+        .andiv2 {
+            height: 5px;
+            width: 100px;
+            /* border: 1px solid; */
+            border-radius: 3px;
+            background-color: rgb(174, 198, 239);
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .circled {
+            height: 12px;
+            width: 12px;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            background-color: rgb(12, 90, 219);
+            position: absolute;
+            margin-top: -4px;
+            animation: slideright 3s linear infinite;
+        }
+
+        @keyframes slideright {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 90px;
+            }
+        }
+
+        .btn4 {
+            height: 50px;
+            width: 190px;
+            background-color: rgb(12, 90, 219);
+            color: white;
+            border-radius: 3px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: .34s;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 130px;
+        }
+
+        .btn4:hover {
+            background-color: rgb(10, 49, 111);
+        }
+
+        .parentim {
+            height: 90%;
+            width: 100%;
+            /* border: 1px solid; */
+            overflow: hidden;
+
+        }
+
+        .imgsd {
+            height: 450px;
+            width: 2280px;
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            animation: slideleft 9s ease infinite;
+        }
+
+        .siximages {
+            height: 450px;
+            width: 381px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-left: -9px;
+        }
+
+        @keyframes slideleft {
+            0% {
+                margin-left: 2px;
+            }
+
+            18% {
+                margin-left: 2px;
+            }
+
+            36% {
+                margin-left: -380px;
+            }
+
+            54% {
+                margin-left: -380px;
+            }
+
+            72% {
+                margin-left: -760px;
+            }
+
+            90% {
+                margin-left: -760px;
+            }
+
+
+        }
+
+        .im1 {
+            background-image: url(./images/images07.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .im2 {
+            background-image: url(./images/images08.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-left: -4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .im3 {
+            background-image: url(./images/images09.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-left: -4px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .im4 {
+            background-image: url(./images/images10.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-left: -4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .im5 {
+            background-image: url(./images/images11.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-left: -4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .im6 {
+            background-image: url(./images/images12.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-left: -4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            /* border: 1px solid red; */
+            position: absolute;
+            transition: .2s;
+            top: 100%;
+            background-color: rgba(12, 91, 219, 0.7);
+        }
+
+        .im1:hover .overlay {
+            transform: scale(1.1);
+            top: 0;
+        }
+
+        .im2:hover .overlay {
+            transform: scale(1.1);
+            top: 0;
+        }
+
+        .im3:hover .overlay {
+            transform: scale(1.1);
+            top: 0;
+        }
+
+        .im4:hover .overlay {
+            transform: scale(1.1);
+            top: 0;
+        }
+
+        .im5:hover .overlay {
+            transform: scale(1.1);
+            top: 0;
+        }
+
+        .im6:hover .overlay {
+            transform: scale(1.1);
+            top: 0;
+        }
+
+        .dialoguebox {
+            height: 110px;
+            width: 230px;
+            /* border: 1px solid red; */
+            background-color: white;
+            border-radius: 10px;
+            margin-left: 70px;
+            margin-top: 180px;
+            transition: .34s;
+        }
+
+        .ddiv {
+            height: 100px;
+            width: max-content;
+            border: 1px solid white;
+            margin-left: 15px;
+            text-align: center;
+
+        }
+
+        .financials {
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        .financials:hover {
+            color: rgb(12, 90, 219);
+        }
+
+        .Dmarketing {
+            color: rgb(12, 90, 219);
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        .Section5 {
+            height: 90vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .csdiv2 {
+            height: 130px;
+            width: max-content;
+            /* border: 1px solid red; */
+            margin-top: 100px;
+            margin-left: 510px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        .andiv3 {
+            height: 5px;
+            width: 100px;
+            /* border: 1px solid; */
+            border-radius: 3px;
+            background-color: rgb(174, 198, 239);
+            margin-top: 30px;
+            position: relative;
+            margin-left: 170px;
+        }
+
+        .threesteps {
+            height: 130px;
+            width: 1000px;
+            /* border: 1px solid red; */
+            margin-top: 50px;
+            margin-left: 280px;
+        }
+
+        .circleblock1 {
+            height: 130px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            transition: .3s;
+            margin-left: 23px;
+        }
+
+        .circleblock2 {
+            height: 130px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            /* margin-left: 210px; */
+            transition: .3s;
+            margin-left: -7px;
+
+        }
+
+        .circleblock3 {
+            height: 130px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            /* margin-left: 210px; */
+            transition: .3s;
+            margin-left: -7px;
+        }
+
+        .c1 {
+            height: 90px;
+            width: 90px;
+            /* border: 1px solid; */
+            background-color: rgb(206, 222, 248);
+            border-radius: 90px;
+            margin-left: 30px;
+            position: relative;
+
+        }
+
+        .c2 {
+            height: 70px;
+            width: 70px;
+            /* border: 1px solid; */
+            background-color: rgb(128, 169, 236);
+            border-radius: 70px;
+            /* margin-left: 30px; */
+            position: absolute;
+            transform: scale(1) translateX(10px)translateY(10px);
+        }
+
+        .c3 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color: rgb(12, 90, 219);
+            position: absolute;
+            transform: scale(1) translateX(10px)translateY(10px);
+        }
+
+        .dg {
+            color: white;
+            font-size: 18px;
+            font-weight: normal;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .circleblock1:hover {
+            transform: scale(1.1);
+        }
+
+        .circleblock2:hover {
+            transform: scale(1.1);
+        }
+
+        .circleblock3:hover {
+            transform: scale(1.1);
+        }
+
+        .dottedline {
+            width: max-content;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 37px;
+            letter-spacing: 9px;
+            font-size: 21px;
+            color: rgb(12, 90, 219);
+            font-weight: lighter;
+            margin-left: 26px;
+        }
+
+        .wrdiv {
+            height: 200px;
+            width: 1070px;
+            /* border: 1px solid rebeccapurple; */
+            margin-left: -65px;
+            margin-top: -10px;
+        }
+
+        .wrblock1 {
+            height: 200px;
+            width: 328px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .pj1 {
+            font-size: 21px;
+        }
+
+        .pg5 {
+            margin-top: 20px;
+            color: rgb(81, 80, 80);
+            line-height: 24px;
+        }
+
+        .Section6 {
+            height: 107vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(./images/images13.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 10px;
+        }
+
+        .bldiv {
+            height: 270px;
+            width: 1100px;
+            /* border: 1px solid; */
+            margin-top: 20px;
+            margin-left: 200px;
+        }
+
+        .whited1 {
+            height: 250px;
+            width: 330px;
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            border-radius: 7px;
+        }
+
+        .pg6 {
+            margin-top: 60px;
+            margin-left: 30px;
+            color: rgb(80, 79, 79);
+            line-height: 25px;
+        }
+
+        .imaged {
+            height: 140px;
+            width: 1100px;
+            /* border: 1px solid; */
+            margin-top: 30px;
+            margin-left: 200px;
+        }
+
+        .ig1 {
+            height: 140px;
+            width: 356px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .pic1 {
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(./images/images15.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rightdiv {
+            height: 100px;
+            width: 170px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .starid {
+            height: 20px;
+            width: 140px;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            margin-left: 10px;
+
+        }
+
+        .stblue {
+            color: rgb(12, 90, 219);
+            font-size: 20px;
+        }
+
+        .stgray {
+            color: rgb(221, 221, 221);
+            font-size: 20px;
+        }
+
+        .mname {
+            color: white;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .IM {
+            color: white;
+            margin-left: 10px;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        .pic2 {
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(./images/images16.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .pic3 {
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(./images/images14.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .Section7 {
+            height: 120vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .parent7 {
+            height: 700px;
+            width: 1260px;
+            /* border: 1px solid red; */
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+
+        .lidiv {
+            height: 710px;
+            width: 600px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images17.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .rtdiv {
+            height: 700px;
+            width: 560px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 70px;
+        }
+
+        .Text4 {
+            height: 170px;
+            width: max-content;
+            /* border: 1px solid red; */
+            margin-top: 90px;
+            text-align: left;
+            color: black;
+
+        }
+
+        .exp {
+            color: rgb(12, 90, 219);
+            font-weight: normal;
+            letter-spacing: 6px;
+            font-size: 17px;
+        }
+
+        .e2 {
+            margin-top: 15px;
+            color: black;
+            font-size: 43px;
+        }
+
+        .e3 {
+            margin-top: 5px;
+            color: black;
+            font-size: 33px;
+        }
+
+        .andiv7 {
+            height: 5px;
+            width: 100px;
+            /* border: 1px solid; */
+            border-radius: 3px;
+            background-color: rgb(174, 198, 239);
+            margin-top: 20px;
+            /* margin-left: 360px; */
+            position: relative;
+        }
+
+        .circled {
+            height: 12px;
+            width: 12px;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            background-color: rgb(12, 90, 219);
+            position: absolute;
+            margin-top: -4px;
+            animation: slideright 3s linear infinite;
+        }
+
+        @keyframes slideright {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 90px;
+            }
+        }
+
+        .p7 {
+            color: rgb(116, 116, 116);
+            line-height: 24px;
+            font-size: 19px;
+        }
+
+        .prcntdiv {
+            height: 80px;
+            width: 500px;
+            /* border: 1px solid red; */
+            margin: 15px;
+            margin-left: -1px;
+        }
+
+        .WB {
+            margin-top: 20px;
+            height: max-content;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .ninety {
+            height: max-content;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 33px;
+            margin-left: 226px;
+            animation: mmove 2s normal;
+        }
+
+        @keyframes mmove {
+            from {
+                margin-left: 10px;
+                opacity: 0;
+            }
+
+            to {
+                margin-left: 226px;
+                opacity: 1;
+            }
+        }
+
+        .graydiv {
+            height: 5px;
+            width: 500px;
+            /* border: 1px solid red; */
+            background-color: rgb(238, 238, 238);
+            margin-top: 4px;
+            position: relative;
+        }
+
+        .bluediv {
+            height: 5px;
+            width: 420px;
+            background-color: rgb(12, 90, 219);
+            position: absolute;
+            animation: move 2s normal;
+
+        }
+
+        @keyframes move {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 420px;
+            }
+        }
+
+        .ninetys {
+            height: max-content;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 33px;
+            margin-left: 330px;
+            animation: mmove2 2s normal;
+        }
+
+        @keyframes mmove2 {
+            from {
+                margin-left: 10px;
+                opacity: 0;
+            }
+
+            to {
+                margin-left: 330px;
+                opacity: 1;
+            }
+        }
+
+        .bluediv2 {
+            height: 5px;
+            width: 470px;
+            background-color: rgb(12, 90, 219);
+            position: absolute;
+            animation: move2 2s normal;
+        }
+
+        @keyframes move2 {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 470px;
+            }
+        }
+
+        .svnty {
+            height: max-content;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 33px;
+            margin-left: 130px;
+            animation: mmove3 2s normal;
+
+        }
+
+        @keyframes mmove3 {
+            from {
+                margin-left: 10px;
+                opacity: 0;
+            }
+
+            to {
+                margin-left: 130px;
+                opacity: 1;
+            }
+        }
+
+        .bluediv3 {
+            height: 5px;
+            width: 310px;
+            background-color: rgb(12, 90, 219);
+            position: absolute;
+            animation: move3 2s normal;
+        }
+
+        @keyframes move3 {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 310px;
+            }
+        }
+
+        .Section8 {
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-color: rgb(237, 244, 252);
+        }
+
+        .parent8 {
+            height: 100vh;
+            width: 1180px;
+            /* border: 1px solid red; */
+            margin-left: 12%;
+            /* margin-top: 5%; */
+            overflow: hidden;
+        }
+
+        .ch8 {
+            height: max-content;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .btn5 {
+            height: 50px;
+            width: 185px;
+            background-color: rgb(12, 90, 219);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: .34s;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 160px;
+            margin-left: 650px;
+        }
+
+        .btn5:hover {
+            background-color: rgb(10, 49, 111);
+        }
+
+        .polaroid {
+            height: 430px;
+            width: 2400px;
+            /* border: 1px solid red; */
+            /* margin-top: 20px; */
+            animation: slideleft2 15s infinite ease alternate;
+
+        }
+
+        @keyframes slideleft2 {
+            0% {
+                margin-left: 0px;
+            }
+
+            14% {
+                margin-left: 0px;
+            }
+
+            28% {
+                margin-left: -380px;
+            }
+
+            42% {
+                margin-left: -380px;
+            }
+
+            56% {
+                margin-left: -780px;
+            }
+
+            70% {
+                margin-left: -780px;
+            }
+
+            84% {
+                margin-left: -1170px;
+            }
+
+            98% {
+                margin-left: -1170px;
+
+            }
+
+            100% {
+                margin-left: -1170px;
+
+            }
+
+
+        }
+
+        .sixwhited {
+            height: 390px;
+            width: 360px;
+            /* border: 1px solid red; */
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin: 15px;
+        }
+
+        .idiv {
+            height: 280px;
+            width: 360px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images18.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .uptext {
+            height: 20px;
+            width: 300px;
+            /* border: 1px solid red; */
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+
+        .techno {
+            color: rgb(119, 120, 119);
+            font-weight: normal;
+            height: max-content;
+            width: max-content;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .bright {
+            border-left: 1px solid rgb(119, 120, 119);
+            height: 10px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+            margin-top: 3px;
+        }
+
+        .odate {
+            color: rgb(119, 120, 119);
+            font-weight: normal;
+            height: max-content;
+            width: max-content;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+
+        .tiktok {
+            /* font-weight: normal; */
+            font-size: 21px;
+            cursor: pointer;
+        }
+
+        .tiktok:hover {
+            color: rgb(12, 90, 219);
+        }
+
+        .idiv2 {
+            height: 280px;
+            width: 360px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images19.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .idiv3 {
+            height: 280px;
+            width: 360px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images20.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .idiv4 {
+            height: 280px;
+            width: 360px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images21.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .idiv5 {
+            height: 280px;
+            width: 360px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images22.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .idiv6 {
+            height: 280px;
+            width: 360px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images23.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .Section9 {
+            height: 30vh;
+            width: 100%;
+            border: 1px solid;
+            background-color: rgb(12, 90, 219);
+            /* text-align: center; */
+            padding: 10px;
+        }
+
+        .newsletter {
+            color: white;
+            font-size: 35px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .emaildiv {
+            height: 70px;
+            width: 800px;
+            background-color: white;
+            border-radius: 12px;
+            margin-top: 30px;
+            margin-left: 360px;
+            padding: 1px;
+            position: relative;
+        }
+
+        .email {
+            color: rgb(130, 117, 125);
+            font-size: 17px;
+            text-align: left;
+            margin-top: 22px;
+            margin-left: 20px;
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: top;
+            height: max-content;
+            width: max-content;
+
+        }
+
+        .btn6 {
+            height: 55px;
+            width: 150px;
+            background-color: rgb(12, 90, 219);
+            position: absolute;
+            color: white;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 17px;
+            border: none;
+            border-radius: 12px;
+            margin-top: 7px;
+            margin-left: 490px;
+            cursor: pointer;
+        }
+
+        .Section10 {
+            height: 80vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(./images/images24.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 10px;
+        }
+
+        .parent10 {
+            height: 350px;
+            width: 1100px;
+            /* border: 1px solid red; */
+            margin-top: 100px;
+            margin-left: 200px;
+        }
+
+        .child1 {
+            height: 350px;
+            width: 300px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .child2 {
+            height: 350px;
+            width: 170px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .logo2 {
+            background-image: url(./images/images02.png);
+            background-size: contain;
+            background-position: center;
+            height: 35px;
+            width: 164px;
+            /* border: 1px solid red; */
+            /* margin-left: 230px; */
+            margin-top: 30px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+
+        .pg10 {
+            color: white;
+            margin-top: 30px;
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        .follow {
+            color: white;
+            margin-top: 30px;
+            font-size: 22px;
+        }
+
+        .socialicon {
+            height: 60px;
+            width: 250px;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .ic {
+            height: 35px;
+            width: 35px;
+            background-color: rgb(24, 125, 255);
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 5px;
+        }
+
+        .fcb {
+            font-size: 19px;
+            margin-top: 8px;
+            margin-left: 7px;
+            color: white;
+        }
+
+        .QA {
+            color: white;
+            margin-top: 25px;
+            cursor: pointer;
+        }
+
+        .child3 {
+            height: 350px;
+            width: 300px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+
+        .ecolumn {
+            height: 90px;
+            width: 280px;
+            /* border: 1px solid red; */
+            margin-top: 20px;
+
+        }
+
+        .pdivl {
+            height: 80px;
+            width: 80px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images26.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 5px;
+        }
+
+        .tdivr {
+            height: 80px;
+            width: 170px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 5px;
+            margin-left: 15px;
+
+        }
+
+        .Illegal {
+            color: white;
+            /* font-weight: normal; */
+            font-size: 14px;
+            line-height: 23px;
+        }
+
+        .date2 {
+            color: rgb(138, 179, 239);
+            font-weight: normal;
+            margin-top: 6px;
+            font-size: 15px;
+        }
+
+        .bottomb {
+            border-bottom: 1px solid rgb(59, 59, 130);
+            width: 280px;
+            margin-top: 10px;
+        }
+
+        .pdivl2 {
+            height: 80px;
+            width: 80px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images27.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 5px;
+        }
+
+        .child4 {
+            height: 350px;
+            width: 280px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .ecolumn2 {
+            height: 60px;
+            width: 270px;
+            /* border: 1px solid red; */
+            margin-top: 16px;
+        }
+
+        .locic {
+            height: 60px;
+            width: 70px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .iccircle {
+            height: 40px;
+            width: 40px;
+            /* border: 1px solid red; */
+            border-radius: 40px;
+            background-color: rgb(24, 125, 255);
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .lc {
+            color: white;
+            font-size: 18px;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+        }
+
+        .lcr {
+            height: 60px;
+            width: max-content;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .lochdng {
+            color: white;
+            font-size: 21px;
+        }
+        .Footer{
+            height: 80px;
+            width: 1100px;
+            /* border: 1px solid red; */
+            margin-left: 200px;
+            margin-top: 30px;
+            border-top: 1px solid rgb(69,104,220);
+        }
+        .resrvedr{
+            color: white;
+            font-size: 16px;
+            margin-top: 30px;
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .endd{
+            color: white;
+            display: inline-block;
+            vertical-align: top;
+            /* border: 1px solid red; */
+            height: max-content;
+            width: max-content;
+            margin-left: 455px;
+            margin-top: 30px;
+        }
+        .endf{
+            display: inline;
+            font-weight: normal;
+            font-size: 16px;
+        }
+        .f2{
+            margin-left: 25px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Section1">
+        <div class="Navbar">
+            <div class="logo"></div>
+            <ul class="Navul">
+                <li class="N1"> <a href="">Home</a>
+                    <div class="dropdown">
+                        <div class="td1">
+                            <h5 class="TT">Main Demo</h5>
+                            <h5 class="TT">IT Solution(New)</h5>
+                            <h5 class="TT">Digital Agency(New)</h5>
+                            <h5 class="TT">Software & Startup(New)</h5>
+                            <h5 class="TT">Home SEO(New)</h5>
+                            <h5 class="TT">Insurance(New)</h5>
+                            <h5 class="TT">IT Solution Demo 02</h5>
+                            <h5 class="TT">IT Solution Demo 03</h5>
+                            <h5 class="TT">IT Solution Demo 04</h5>
+                            <h5 class="TT">IT Solution Demo 05</h5>
+
+                        </div>
+                        <div class="td2">
+                            <h5 class="TT">IT Solution Demo 06</h5>
+                            <h5 class="TT">IT Solution Demo 07</h5>
+                            <h5 class="TT">IT Solution Demo 08</h5>
+                            <h5 class="TT">IT Solution Demo 09</h5>
+                            <h5 class="TT">IT Solution Demo 10</h5>
+                            <h5 class="TT">IT Solution Demo 11</h5>
+                            <h5 class="TT">IT Solution Demo 12</h5>
+                            <h5 class="TT">IT Solution Demo 13</h5>
+                            <h5 class="TT">IT Solution Demo 14</h5>
+                            <h5 class="TT">IT Solution Demo 15</h5>
+                        </div>
+                        <div class="td2">
+                            <h5 class="TT">IT Startup Demo 01</h5>
+                            <h5 class="TT">IT Startup Demo 03</h5>
+                            <h5 class="TT">Crypto Currency 01</h5>
+                            <h5 class="TT">Crypto Currency 01</h5>
+                            <h5 class="TT">Odoo ERP Demo</h5>
+                            <h5 class="TT">Demo Cyber Security</h5>
+                            <h5 class="TT">Business Demo 01</h5>
+                            <h5 class="TT">Animate Demo 01</h5>
+                            <h5 class="TT">IT Startup Demo 02</h5>
+                            <h5 class="TT">Dark Version 01</h5>
+                        </div>
+                        <div class="td2">
+                            <h5 class="TT">Dark Version 01</h5>
+                            <h5 class="TT">Landing Page Demo 01</h5>
+                            <h5 class="TT">Landing Page Demo 02</h5>
+                            <h5 class="TT">Landing Page Demo 03</h5>
+                            <h5 class="TT">Landing Page Demo 04</h5>
+                            <h5 class="TT">Landing Page Demo 05</h5>
+                            <h5 class="TT">Landing Page Demo 06</h5>
+                            <h5 class="TT">Landing Page Demo 07</h5>
+                            <h5 class="TT">Landing Page Demo 08</h5>
+                            <h5 class="TT">Landing Page Demo 09</h5>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="N1">Company</li>
+                <li class="N1"><a href="">Services</a>
+                    <div class="dropdown2">
+                        <div class="td5">
+                            <h5 class="TT">IT Service</h5>
+                            <h5 class="TT">Industries</h5>
+                            <h5 class="TT">Business Solution</h5>
+                            <h5 class="TT">Managed IT Services</h5>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="N1"><a href="">Pages</a>
+                    <div class="dropdown3">
+                        <div class="td1">
+                            <h5 class="TT3">About Us Style 01</h5>
+                            <h5 class="TT3">About Us Style 02</h5>
+                            <h5 class="TT3">About Us Style 03</h5>
+                            <h5 class="TT3">About Us Style 04</h5>
+                            <h5 class="TT3">About Us Style 05</h5>
+                            <h5 class="TT3">Why Choose Us</h5>
+
+                        </div>
+                        <div class="td1">
+                            <h5 class="TT3">Service Style 01</h5>
+                            <h5 class="TT3">Service Style 02</h5>
+                            <h5 class="TT3">Service Style 03</h5>
+                            <h5 class="TT3">Service Style 04</h5>
+                            <h5 class="TT3">Service Style 01</h5>
+                            <h5 class="TT3">Service Details</h5>
+                        </div>
+                        <div class="td1">
+                            <h5 class="TT3">Pricing Plan 01</h5>
+                            <h5 class="TT3">Pricing Plan 02</h5>
+                            <h5 class="TT3">Pricing Plan 03</h5>
+                            <h5 class="TT3">Portfolio</h5>
+                            <h5 class="TT3">Portfolio 2Column </h5>
+                            <h5 class="TT3">Portfolio 3Column </h5>
+
+                        </div>
+                        <div class="td1">
+                            <h5 class="TT3">Portfolio 3Column </h5>
+                            <h5 class="TT3">Contact Style 01</h5>
+                            <h5 class="TT3">Contact Style 02</h5>
+                            <h5 class="TT3">Contact Style 03</h5>
+                            <h5 class="TT3">Contact Style 04</h5>
+                            <h5 class="TT3">Contact Style 05</h5>
+                        </div>
+                        <div class="td1">
+                            <h5 class="TT3">Team Members</h5>
+                            <h5 class="TT3">Team Details</h5>
+                            <h5 class="TT3">Case Study</h5>
+                            <h5 class="TT3">FAQ'S</h5>
+                            <h5 class="TT3">Carrier</h5>
+                            <h5 class="TT3">Carrier Details</h5>
+                        </div>
+                        <div class="td1">
+                            <h5 class="TT3">FAQ'S</h5>
+                            <h5 class="TT3">FAQ'S Style 02</h5>
+                            <h5 class="TT3">Shop</h5>
+                            <h5 class="TT3">Shop</h5>
+                            <h5 class="TT3">Checkout</h5>
+                            <h5 class="TT3">Cart</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="N1"><a href="">Elements</a>
+                    <div class="dropdown3">
+                        <div class="td1">
+                            <h5 class="TT3">Feature Box</h5>
+                            <h5 class="TT3">Service Boxes</h5>
+                            <h5 class="TTsocial3">Icon Boxes</h5>
+                            <h5 class="TT3">Service Boxes Carousel</h5>
+                            <h5 class="TT3">Team</h5>
+                            <h5 class="TTsocial3">Icons</h5>
+
+                        </div>
+                        <div class="td4">
+                            <h5 class="TT3">Pricing Plan</h5>
+                            <h5 class="TT3">Testimonial</h5>
+                            <h5 class="TT3">Counter Boxes</h5>
+                            <h5 class="TT3">Image Box</h5>
+                            <h5 class="TT3">Video</h5>
+                            <h5 class="TT3">Tab</h5>
+
+                        </div>
+                        <div class="td4">
+                            <h5 class="TT3">Progress bar</h5>
+                            <h5 class="TT3">FAQ'S</h5>
+                            <h5 class="TT3">Title</h5>
+                            <h5 class="TT3">Lists</h5>
+                            <h5 class="TT3">Accordion</h5>
+                            <h5 class="TT3">Call Do Action</h5>
+
+                        </div>
+                        <div class="td4">
+                            <h5 class="TT3">Button</h5>
+                            <h5 class="TT3">Pie Chart</h5>
+                            <h5 class="TT3">Pie Chart</h5>
+                            <h5 class="TT3">Clients</h5>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="N1"><a href="">Blogs</a>
+                    <div class="dropdown4">
+                        <div class="td6">
+                            <h5 class="TT6">Blog Grid</h5>
+                            <h5 class="TT6">Blog List</h5>
+                            <h5 class="TT6">Block 2 Column</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="N1">Contact</li>
+            </ul>
+            <i class="fa-solid fa-magnifying-glass srch"></i>
+            <i class="fa-solid fa-bag-shopping bag">
+                <div class="cd">0</div>
+            </i>
+        </div>
+        <h2 class="wc">WELCOME TO TECHNO</h2>
+        <div id="container">
+            <h1 class="pais">PROVIDE ALL ITS SERVICES</h1>
+            <h1 class="hs">HOSTING SERVICES</h1>
+            <h1 class="dm">DIGITAL MARKETING</h1>
+        </div>
+        <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            <br> ut laboret dolore magna aliqua. Ut en ad minim ullamco laboris nisi ut aliquip.
+        </p>
+        <button class="btn1">ABOUT US</button>
+        <button class="btn2">HOW IT WORK</button>
+    </div>
+    <div class="Section2">
+        <div class="Blocks">
+            <div class="block1">
+                <div classocials="icondiv1">
+                    <i class="fa-solid fa-sign-hanging PE"></i>
+                </div>
+                <h2 class="h1">Product Engineering</h2>
+                <p class="pg1">We have the expertise to help you <br> define a game plan, design the <br> products
+                    customers want.</p>
+                <h5 class="RM">READ MORE</h5>
+            </div>
+            <div class="block2">
+                <div classocials="icondiv2">
+                    <i class="fa-brands fa-facebook facebook"></i>
+                </div>
+                <h2 class="hd1">Digital Services</h2>
+                <p class="pg2">We have the expertise to help you <br> define a game plan, design the <br> products
+                    customers want.</p>
+                <h5 class="RM2">READ MORE</h5>
+            </div>
+            <div class="block1">
+                <div classocials="icondiv1">
+                    <i class="fa-solid fa-users PE"></i>
+                </div>
+                <h2 class="h1">IT Consultancy</h2>
+                <p class="pg1">We have the expertise to help you <br> define a game plan, design the <br> products
+                    customers want.</p>
+                <h5 class="RM">READ MORE</h5>
+            </div>
+        </div>
+        <div class="image2l">
+            <div class="playic">
+                <i class="fa-solid fa-play pc"></i>
+                <div class="glooming1"></div>
+                <div class="glooming2"></div>
+                <div class="glooming3"></div>
+            </div>
+        </div>
+        <div class="text2r">
+            <h1 class="digits">25</h1>
+            <h1 class="exyear">Years of experience <br> in IT Solution & <br> Business</h1>
+            <p class="Paragraph2">There are many variations of passages of Lorem Ipsum available, <br>
+                but the majority have suffered alteration in some form, by injected
+                <br> humour, or randomised words which don’t look even slightly
+                <br> believable. If you are going to use a passage of Lorem Ipsum, you
+                <br> need to be sure there isn’t anything embarrassing <br>
+                <br>
+                There are many variations of passages of Lorem Ipsum available,
+                <br> but the majority have suffered alteration in some form, by injected
+                <br> humour, or randomised words
+            </p>
+            <button class="btn3">More Details</button>
+        </div>
+    </div>
+    <div class="Section3">
+        <div class="Text3">
+            <h3 class="Services">OUR SERVICES</h3>
+            <h1 class="s2">We Run All Kinds Of IT Services</h1>
+            <h2 class="s3">With 20 Years Of Experience</h2>
+            <div class="andiv">
+                <div class="circled"></div>
+            </div>
+        </div>
+        <div class="sbdiv">
+            <div class="transparentd">
+                <i class="fa-brands fa-facebook-f fb"></i>
+                <h2 class="h3">Digital Services</h2>
+                <p class="pg3">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                    profitable growths.</p>
+                <h4 class="readmore">Read More</h4>
+                <i class="fa-solid fa-arrow-right aw"></i>
+            </div>
+            <div class="transparentd">
+                <i class="fa-solid fa-sign-hanging font"></i>
+                <h2 class="h3">Product Development</h2>
+                <p class="pg3">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                    profitable growths.</p>
+                <h4 class="readmore">Read More</h4>
+                <i class="fa-solid fa-arrow-right aw"></i>
+            </div>
+            <div class="transparentd">
+                <i class="fa-solid fa-person-chalkboard font"></i>
+                <h2 class="h3">Content Engineering</h2>
+                <p class="pg3">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                    profitable growths.</p>
+                <h4 class="readmore">Read More</h4>
+                <i class="fa-solid fa-arrow-right aw"></i>
+            </div>
+        </div>
+        <div class="transparentd2">
+            <i class="fa-regular fa-lightbulb font"></i>
+            <h2 class="h3">Experienced Design</h2>
+            <p class="pg3">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <h4 class="readmore">Read More</h4>
+            <i class="fa-solid fa-arrow-right aw"></i>
+        </div>
+        <div class="transparentd3">
+            <i class="fa-solid fa-users font"></i>
+            <h2 class="h3">Advisory Services</h2>
+            <p class="pg3">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <h4 class="readmore">Read More</h4>
+            <i class="fa-solid fa-arrow-right aw"></i>
+        </div>
+        <div class="transparentd4">
+            <i class="fa-solid fa-cloud-arrow-up font"></i>
+            <h2 class="h3">Data Structuring</h2>
+            <p class="pg3">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <h4 class="readmore">Read More</h4>
+            <i class="fa-solid fa-arrow-right aw"></i>
+        </div>
+
+    </div>
+    <div class="Summary">
+        <div class="smryd">
+            <div class="fifteenk">
+                <h1 class="fk">15k</h1>
+                <h3 class="cl">Happy Clients</h3>
+                <div class="borderr"></div>
+            </div>
+            <div class="fifteenk">
+                <h1 class="fk">1280+</h1>
+                <h3 class="cl">Account Number</h3>
+                <div class="borderr"></div>
+            </div>
+            <div class="fifteenk">
+                <h1 class="fk">10k</h1>
+                <h3 class="cl">Finished Projects</h3>
+                <div class="borderr"></div>
+            </div>
+            <div class="fifteenk">
+                <h1 class="fk">992+</h1>
+                <h3 class="cl">Win Awards</h3>
+            </div>
+        </div>
+    </div>
+    <div class="Section4">
+        <div class="csdiv">
+            <h5 class="csstudy">CASE STUDIES</h5>
+            <h1 class="cs2">Some Of Our Case Studies</h1>
+            <div class="andiv2">
+                <div class="circled"></div>
+            </div>
+        </div>
+        <button class="btn4">See All Cases</button>
+        <div class="parentim">
+            <div class="imgsd">
+                <div class="siximages im1">
+                    <div class="overlay">
+                        <div class="dialoguebox">
+                            <div class="ddiv">
+                                <h3 class="financials">Solution For Financial</h3>
+                                <h5 class="Dmarketing">Design Marketing</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="siximages im2">
+                    <div class="overlay">
+                        <div class="dialoguebox">
+                            <div class="ddiv">
+                                <h3 class="financials">Solution For Business</h3>
+                                <h5 class="Dmarketing">Design Marketing</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="siximages im3">
+                    <div class="overlay">
+                        <div class="dialoguebox">
+                            <div class="ddiv">
+                                <h3 class="financials">Solution For Financial</h3>
+                                <h5 class="Dmarketing">Design Marketing</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="siximages im4">
+                    <div class="overlay">
+                        <div class="dialoguebox">
+                            <div class="ddiv">
+                                <h3 class="financials">Solution For Business</h3>
+                                <h5 class="Dmarketing">Design Marketing</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="siximages im5">
+                    <div class="overlay">
+                        <div class="dialoguebox">
+                            <div class="ddiv">
+                                <h3 class="financials">Solution For Financial</h3>
+                                <h5 class="Dmarketing">Design Marketing</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="siximages im6">
+                    <div class="overlay">
+                        <div class="dialoguebox">
+                            <div class="ddiv">
+                                <h3 class="financials">Solution For Financial</h3>
+                                <h5 class="Dmarketing">Design Marketing</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="Section5">
+        <div class="csdiv2">
+            <h5 class="csstudy">PROCESS</h5>
+            <h1 class="cs2">Our Working Process
+            </h1>
+            <div class="andiv3">
+                <div class="circled"></div>
+            </div>
+        </div>
+        <div class="threesteps">
+            <div class="circleblock1">
+                <div class="c1">
+                    <div class="c2">
+                        <div class="c3">
+                            <h6 class="dg">1</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dottedline">-------------</div>
+            <div class="circleblock2">
+                <div class="c1">
+                    <div class="c2">
+                        <div class="c3">
+                            <h6 class="dg">2</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dottedline">-------------</div>
+            <div class="circleblock3">
+                <div class="c1">
+                    <div class="c2">
+                        <div class="c3">
+                            <h6 class="dg">3</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrdiv">
+                <div class="wrblock1">
+                    <h2 class="pj1">Select A Project</h2>
+                    <p class="pg5">We have the technology and industry <br>
+                        expertise to develop solutions that can
+                        <br> connect people and businesses across <br> variety of mobile devices.
+                    </p>
+                </div>
+                <div class="wrblock1">
+                    <h2 class="pj1">Project Analysis</h2>
+                    <p class="pg5">We have the technology and industry <br>
+                        expertise to develop solutions that can
+                        <br> connect people and businesses across <br> variety of mobile devices.
+                    </p>
+                </div>
+                <div class="wrblock1">
+                    <h2 class="pj1">Deliver Result</h2>
+                    <p class="pg5">We have the technology and industry <br>
+                        expertise to develop solutions that can
+                        <br> connect people and businesses across <br> variety of mobile devices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section6">
+        <div class="Text3">
+            <h3 class="Services">TESTIMONIAL</h3>
+            <h1 class="s2">What Says</h1>
+            <h2 class="s3">Our Happy Clients</h2>
+            <div class="andiv">
+                <div class="circled"></div>
+            </div>
+        </div>
+        <div class="bldiv">
+            <div class="whited1">
+                <p class="pg6">Sorem Ipsum dolor sit amit there any <br> consecutitor adipisicing eliter sed do
+                    <br> the eiusomod tempor asem incididunt <br> ut labore dolore magna aliqua. Ut <br> enim adern
+                    minim.
+                </p>
+            </div>
+            <div class="whited1">
+                <p class="pg6">Sorem Ipsum dolor sit amit there any <br> consecutitor adipisicing eliter sed do
+                    <br> the eiusomod tempor asem incididunt <br> ut labore dolore magna aliqua. Ut <br> enim adern
+                    minim.
+                </p>
+            </div>
+            <div class="whited1">
+                <p class="pg6">Sorem Ipsum dolor sit amit there any <br> consecutitor adipisicing eliter sed do
+                    <br> the eiusomod tempor asem incididunt <br> ut labore dolore magna aliqua. Ut <br> enim adern
+                    minim.
+                </p>
+            </div>
+        </div>
+        <div class="imaged">
+            <div class="ig1">
+                <div class="pic1"></div>
+                <div class="rightdiv">
+                    <div class="starid">
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stgray"></i>
+                    </div>
+                    <h3 class="mname">Abraham Johne</h3>
+                    <h4 class="IM">IT Manager</h4>
+                </div>
+            </div>
+            <div class="ig1">
+                <div class="pic2"></div>
+                <div class="rightdiv">
+                    <div class="starid">
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                    </div>
+                    <h3 class="mname">Jamal Vuiyan</h3>
+                    <h4 class="IM">Developer</h4>
+                </div>
+            </div>
+            <div class="ig1">
+                <div class="pic3"></div>
+                <div class="rightdiv">
+                    <div class="starid">
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stblue"></i>
+                        <i class="fa-solid fa-star stgray"></i>
+                        <i class="fa-solid fa-star stgray"></i>
+                    </div>
+                    <h3 class="mname">Fatima Jahra</h3>
+                    <h4 class="IM">Developer</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section7">
+        <div class="parent7">
+            <div class="lidiv"></div>
+            <div class="rtdiv">
+                <div class="Text4">
+                    <h3 class="exp">OUR EXPERIENCE</h3>
+                    <h1 class="e2">Stay Up, Stay Running</h1>
+                    <h2 class="e3">& Protected</h2>
+                    <div class="andiv7">
+                        <div class="circled"></div>
+                    </div>
+                </div>
+                <p class="p7">High-tech industries play an important role in the modern
+                    <br> economy, and often experience significantly higher pay than
+                    <br> other industries. And Digital solutions
+                </p>
+                <div class="prcntdiv">
+                    <h3 class="WB">Web Development</h3>
+                    <div class="ninety">90%</div>
+                    <div class="graydiv">
+                        <div class="bluediv"></div>
+                    </div>
+                </div>
+                <div class="prcntdiv">
+                    <h3 class="WB">Web Design</h3>
+                    <div class="ninetys">96%</div>
+                    <div class="graydiv">
+                        <div class="bluediv2"></div>
+                    </div>
+                </div>
+                <div class="prcntdiv">
+                    <h3 class="WB">Digital Marketing</h3>
+                    <div class="svnty">70%</div>
+                    <div class="graydiv">
+                        <div class="bluediv3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="Section8">
+        <div class="parent8">
+            <div class="ch8">
+                <div class="Text4">
+                    <h3 class="exp">LATEST ARTICLE</h3>
+                    <h1 class="e2">See Our Latest</h1>
+                    <h2 class="e3">Blog Posts</h2>
+                    <div class="andiv7">
+                        <div class="circled"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn5">See All Blogs</button>
+            <div class="polaroid">
+                <div class="sixwhited">
+                    <div class="idiv"></div>
+                    <div class="uptext">
+                        <h5 class="techno">Techno</h5>
+                        <div class="bright"></div>
+                        <h5 class="odate">October 22,2020</h5>
+                        <h2 class="tiktok">Tiktok Illegally collecting <br> data sharing</h2>
+                    </div>
+                </div>
+                <div class="sixwhited">
+                    <div class="idiv2"></div>
+                    <div class="uptext">
+                        <h5 class="techno">Techno</h5>
+                        <div class="bright"></div>
+                        <h5 class="odate">October 22,2020</h5>
+                        <h2 class="tiktok">How can use our latest news by techno</h2>
+                    </div>
+                </div>
+                <div class="sixwhited">
+                    <div class="idiv3"></div>
+                    <div class="uptext">
+                        <h5 class="techno">Techno</h5>
+                        <div class="bright"></div>
+                        <h5 class="odate">October 22,2020</h5>
+                        <h2 class="tiktok">Convincing reasons you need to learn</h2>
+                    </div>
+                </div>
+                <div class="sixwhited">
+                    <div class="idiv4"></div>
+                    <div class="uptext">
+                        <h5 class="techno">Techno</h5>
+                        <div class="bright"></div>
+                        <h5 class="odate">October 22,2020</h5>
+                        <h2 class="tiktok">The five devices you need to work anytime</h2>
+                    </div>
+                </div>
+                <div class="sixwhited">
+                    <div class="idiv5"></div>
+                    <div class="uptext">
+                        <h5 class="techno">Techno</h5>
+                        <div class="bright"></div>
+                        <h5 class="odate">October 22,2020</h5>
+                        <h2 class="tiktok">How to learn PHP 10 tips to get you started</h2>
+                    </div>
+                </div>
+                <div class="sixwhited">
+                    <div class="idiv6"></div>
+                    <div class="uptext">
+                        <h5 class="techno">Techno</h5>
+                        <div class="bright"></div>
+                        <h5 class="odate">October 22,2020</h5>
+                        <h2 class="tiktok">The five devices you need to work anytime</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section9">
+        <h1 class="newsletter">Subscribe Our Newsletter</h1>
+        <div class="emaildiv">
+            <h5 class="email">Enter Your Email*</h5>
+            <button class="btn6">Subscribe</button>
+        </div>
+    </div>
+    <div class="Section10">
+        <div class="parent10">
+            <div class="child1">
+                <div class="logo2"></div>
+                <p class="pg10">Completely strategize client-cent <br> Phosfluorescently iterate efficient
+                    <br> internal or organic.
+                </p>
+                <h3 class="follow">Follow Us</h3>
+                <div class="socialicon">
+                    <div class="ic">
+                        <i class="fa-brands fa-facebook-f fcb"></i>
+                    </div>
+                    <div class="ic">
+                        <i class="fa-brands fa-instagram fcb"></i>
+                    </div>
+                    <div class="ic">
+                        <i class="fa-brands fa-twitter fcb"></i>
+                    </div>
+                    <div class="ic">
+                        <i class="fa-brands fa-youtube fcb"></i>
+                    </div>
+
+                </div>
+            </div>
+            <div class="child2">
+                <h3 class="follow">Quick Links</h3>
+                <li class="QA">Home</li>
+                <li class="QA">About Us</li>
+                <li class="QA">Contact Us</li>
+                <li class="QA">Services</li>
+                <li class="QA">Our Team</li>
+            </div>
+            <div class="child3">
+                <h3 class="follow">Popular Post</h3>
+                <div class="ecolumn">
+                    <div class="pdivl"></div>
+                    <div class="tdivr">
+                        <h4 class="Illegal">Tiktok Illegally collecting <br> data sharing</h4>
+                        <h5 class="date2">October 22,2020</h5>
+
+                    </div>
+                </div>
+                <div class="bottomb"></div>
+                <div class="ecolumn">
+                    <div class="pdivl2"></div>
+                    <div class="tdivr">
+                        <h4 class="Illegal">How can use our latest <br> news by</h4>
+                        <h5 class="date2">October 22,2020</h5>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="child4">
+                <h3 class="follow">Contact Info</h3>
+                <div class="ecolumn2">
+                    <div class="locic">
+                        <div class="iccircle">
+                            <i class="fa-solid fa-location-dot lc"></i>
+                        </div>
+                    </div>
+                    <div class="lcr">
+                        <h3 class="lochdng">Location</h3>
+                        <h5 class="date2">55 Main Street, New York.
+                        </h5>
+                    </div>
+                </div>
+                <div class="ecolumn2">
+                    <div class="locic">
+                        <div class="iccircle">
+                            <i class="fa-solid fa-envelope-open-text lc"></i>
+                        </div>
+                    </div>
+                    <div class="lcr">
+                        <h3 class="lochdng">Email Us</h3>
+                        <h5 class="date2">example@gmail.com
+                        </h5>
+                    </div>
+                </div>
+                <div class="ecolumn2">
+                    <div class="locic">
+                        <div class="iccircle">
+                            <i class="fa-solid fa-phone-volume lc"></i>
+                        </div>
+                    </div>
+                    <div class="lcr">
+                        <h3 class="lochdng">Phone Us</h3>
+                        <h5 class="date2">e+012 (345) 678 99
+                        </h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="Footer">
+            <h5 class="resrvedr">© 2022 Techno.All Rights Reserved.</h5>
+            <div class="endd">
+                <h5 class="endf f1">Privacy Policy</h5>
+                <h5 class="endf f2">Terms & Conditions</h5>
+                <h5 class="endf f2">Contact Us</h5>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
